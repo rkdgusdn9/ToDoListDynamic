@@ -11,8 +11,16 @@ namespace ToDoListDynamic
         {
             Welcome();
             AddTasks();
-            //ChooseType();
+            var itemToAdd = ChooseType();
+            list.add(itemToAdd);
+
+            list.ShowAllTodoList();
             //ShowToDo();
+
+            foreach(var item in list)
+            {
+                item.ShowItem();
+            }
         }
 
         private static void Welcome()
@@ -67,24 +75,24 @@ namespace ToDoListDynamic
             switch (inputType)
             {
                 case 1:
-                    toDoItem = new Message(inputType);
-                    //wholeMessage = toDoItem.ToString();
-                    //messageList.Add(wholeMessage);
-
+                    toDoItem = new Message();
                     break;
 
                 case 2:
-                    toDoItem = new Appointment(inputType);
-                    //wholeMessage = toDoItem.ToString();
-                    //messageList.Add(wholeMessage);
+                    toDoItem = new Appointment();
                     break;
 
                 case 3:
-                    toDoItem = new Zoom(inputType);
-                    //wholeMessage = toDoItem.ToString();
-                    //messageList.Add(wholeMessage);
+                    toDoItem = new Zoom();
+                    break;
+
+                case 4:
+                    toDoItem = new ShoppingItem();
                     break;
             }
+
+
+            toDoItem.AskForInputs();
 
             return toDoItem;
 
@@ -100,6 +108,10 @@ namespace ToDoListDynamic
                 Console.WriteLine(toDo.ToString());
             }
 
+        }
+
+
+        public class ShoppingItem() { 
         }
 
     }
