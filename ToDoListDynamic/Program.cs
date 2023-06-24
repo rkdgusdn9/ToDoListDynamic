@@ -54,36 +54,29 @@ namespace ToDoListDynamic
         private static ToDoItem ChooseType()
         {
             ToDoItem toDoItem = null;
-            var messageList = new List<string>();
-            string wholeMessage;
+            //var messageList = new List<string>();
+            //string wholeMessage;
             Console.WriteLine("\nSelect Type:\n");
             int inputType = Convert.ToInt32(Console.ReadLine());
             switch (inputType)
             {
                 case 1:
                     toDoItem = new Message(inputType);
-                    wholeMessage = toDoItem.ToString();
-                    messageList.Add(wholeMessage);
-                    //foreach(var test1 in tests)
-                    //{
-                    //    Console.WriteLine(test1);
-                    //}
+                    //wholeMessage = toDoItem.ToString();
+                    //messageList.Add(wholeMessage);
+
                     break;
 
                 case 2:
                     toDoItem = new Appointment(inputType);
-                    wholeMessage = toDoItem.ToString();
-                    messageList.Add(wholeMessage);
-                    //foreach (var test3 in messageList)
-                    //{
-                    //    Console.WriteLine(test3);
-                    //}
+                    //wholeMessage = toDoItem.ToString();
+                    //messageList.Add(wholeMessage);
                     break;
 
                 case 3:
                     toDoItem = new Zoom(inputType);
-                    wholeMessage = toDoItem.ToString();
-                    messageList.Add(wholeMessage);
+                    //wholeMessage = toDoItem.ToString();
+                    //messageList.Add(wholeMessage);
                     break;
             }
 
