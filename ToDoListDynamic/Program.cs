@@ -9,9 +9,10 @@ namespace ToDoListDynamic
         public static ToDoList AllList = null;
         static void Main(string[] args)
         {
-            //Welcome();
+            Welcome();
+            AddTasks();
             //ChooseType();
-            ShowToDo();
+            //ShowToDo();
         }
 
         private static void Welcome()
@@ -22,7 +23,12 @@ namespace ToDoListDynamic
                 Name = Console.ReadLine()
             };
             user.ProperName();
-            Console.WriteLine($"\nHi {user.Name}, here is your ToDo list\n");
+            Console.WriteLine($"\nHi {user.Name}, Welcome\n");
+            
+        }
+
+        private static void AddTasks()
+        {
             Console.WriteLine("Do you want to add a task?\n");
             Console.WriteLine("[1] Yes\n");
             Console.WriteLine("[2] No\n");
@@ -30,15 +36,15 @@ namespace ToDoListDynamic
             string userInput = Console.ReadLine();
             int number;
             Int32.TryParse(userInput, out number);
-            while (number != 1 && number != 2)
+            while (number != 1 || number != 2)
             {
                 if (number == 1)
                 {
-
+                    ShowToDo();
                 }
                 else if (number == 2)
                 {
-
+                    break;
                 }
                 else
                 {
