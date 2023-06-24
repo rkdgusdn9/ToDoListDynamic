@@ -87,7 +87,7 @@ namespace ToDoListDynamic
         private static void ShowToDo()
         {
             var todo = ChooseType();
-            List<ToDoList> AllList = new List<ToDoList>();
+            List<ToDoItem> AllList = new List<ToDoItem>(); // Found mistake here that this list is not from ToDoList class and create new list each time showtodo is called
             AllList.Add(todo);
             foreach (var toDo in AllList)
             {
