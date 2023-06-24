@@ -17,6 +17,8 @@ namespace ToDoListDynamic.Class
 
         public string ToString()
         {
+            // Created enum class to retrieve AM,PM status for practice and need to setup this condition.
+            // Currently this is only only retrieving 'AM' hard-coded and no condition for input
             return $"{Year}/{Month}/{Day} {Hour}:{Minute}{AMPM.AM}";
         }
     }
