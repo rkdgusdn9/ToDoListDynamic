@@ -15,5 +15,10 @@ namespace ToDoListDynamic.Class
             ToString();
         }
 
+        public override void AskForInputs()
+        {
+            Console.WriteLine("Type your message");
+            this.Message = Console.ReadLine();
+        }
     }
 }

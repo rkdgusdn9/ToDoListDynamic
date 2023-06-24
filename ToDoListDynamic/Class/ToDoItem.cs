@@ -20,6 +20,8 @@ namespace ToDoListDynamic.Class
             Message = InputTask;
         }
 
+        public abstract void AskForInputs();
+
         public DateTime CheckDateTime()
         {
             //DateTime dateTime = new DateTime();
